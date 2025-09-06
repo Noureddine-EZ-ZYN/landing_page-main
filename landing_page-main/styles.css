@@ -123,7 +123,7 @@ body {
 
 .hero-text-left {
     font-family: "Playfair Display", serif;
-    font-size: 48px;
+    font-size: clamp(32px, 8vw, 48px);
     font-weight: 400;
     color: #F4E9DB;
     position: absolute;
@@ -134,12 +134,12 @@ body {
 
 .hero-text-right {
     font-family: "Playfair Display", serif;
-    font-size: clamp(24px, 4vw, 48px);
+    font-size: clamp(24px, 6vw, 48px);
     font-weight: 400;
     color: #F4E9DB;
     position: absolute;
     right: clamp(20px, 8vw, 80px);
-    top: clamp(4px, 5vh, 50px);
+    top: clamp(40px, 10vh, 50px);
     line-height: 1.2;
 }
 
@@ -163,6 +163,7 @@ body {
     background: #a8916f;
     transform: translateY(-2px);
 }
+
 .about2 {
     background: linear-gradient(135deg, #f4f1e8 0%, #e8dcc0 50%, #d4c4a0 100%);
     padding: 80px 0;
@@ -170,21 +171,18 @@ body {
 
 .about-text2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-weight: 400;
     color: #b8870b76;
     line-height: 1.3;
     margin-bottom: 3rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
-    right: 18%;
-    width: 1000px;
-    
-}
-.about-text2 {
-    width: auto;
-    position: relative;
-    left: 2%;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2%;
+    text-align: center;
 }
 
 /* ===== ABOUT SECTION ===== */
@@ -209,22 +207,22 @@ body {
 }
 
 .about-title {
-    font-size: clamp(40px, 6vw, 60px);
+    font-size: clamp(32px, 8vw, 60px);
     font-weight: 500;
     font-family: "UnJamoBatang", serif;
     margin-bottom: -18px;
     color: #5b3728;
-    letter-spacing: clamp(2px, 1vw, 6px);
+    letter-spacing: clamp(1px, 2vw, 6px);
 }
 
 .about-role {
-    font-size: 12px;
+    font-size: clamp(11px, 2vw, 12px);
     font-weight: 400;
     color: #825f2b;
 }
 
 .about-subtitle {
-    font-size: clamp(16px, 2vw, 19px);
+    font-size: clamp(14px, 3vw, 19px);
     font-family: "UnJamoBatang", serif;
     font-weight: 450;
     color: #5b3728;
@@ -239,14 +237,14 @@ body {
 }
 
 .about-heading {
-    font-size: 18px;
+    font-size: clamp(16px, 3vw, 18px);
     font-weight: bold;
     margin-bottom: 15px;
     color: #bf9b64;
 }
 
 .about-text {
-    font-size: 13px;
+    font-size: clamp(12px, 2.5vw, 13px);
     line-height: 1.6;
     margin-bottom: 20px;
     color: #bf9b64;
@@ -258,7 +256,7 @@ body {
 
 .about-image img {
     width: 100%;
-    max-width: 300px;
+    max-width: clamp(250px, 40vw, 300px);
     height: auto;
     border-radius: 12px;
     display: block;
@@ -266,21 +264,20 @@ body {
 
 /* ===== WHAT MAKES DIFFERENT SECTION ===== */
 .what-makes-different {
-    background: #9a8366 ;
+    background: #9a8366;
     padding: 60px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .section-title {
     color: #cdac69;
-    font-size: clamp(20px, 4vw, 36px);
+    font-size: clamp(18px, 5vw, 36px);
     font-weight: 200;
     margin-bottom: 40px;
     text-align: center;
-    letter-spacing: 3px;
+    letter-spacing: clamp(1px, 1vw, 3px);
     font-family: "UnJamoBatang", serif;
 }
 
@@ -289,7 +286,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: clamp(30px, 8vw, 60px);
     max-width: 1100px;
     width: 100%;
 }
@@ -300,32 +297,27 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 120px;
-    /* espace vertical entre les deux textes */
+    gap: clamp(60px, 15vw, 120px);
     flex: 1;
-    letter-spacing: 2px;
+    letter-spacing: clamp(1px, 0.5vw, 2px);
 }
 
 .features-left {
     align-items: flex-end;
     text-align: center;
     white-space: nowrap;
-    letter-spacing: 1px;
-   
-
 }
 
 .features-right {
     align-items: flex-start;
     text-align: center;
-letter-spacing: 1px;
 }
 
 /* --- Image au centre --- */
 .center-image {
     flex-shrink: 0;
-    width: clamp(180px, 22vw, 280px);
-    height: clamp(180px, 22vw, 280px);
+    width: clamp(150px, 30vw, 280px);
+    height: clamp(150px, 30vw, 280px);
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid #978062;
@@ -341,26 +333,25 @@ letter-spacing: 1px;
 /* --- Texte --- */
 .feature-item {
     color: #f4e9db;
-    max-width: 250px;
+    max-width: clamp(200px, 40vw, 250px);
 }
 
 .feature-title {
-    font-size: clamp(14px, 2vw, 20px);
+    font-size: clamp(12px, 3vw, 20px);
     font-weight: 500;
     margin-bottom: 6px;
-    letter-spacing: 2px;
+    letter-spacing: clamp(1px, 0.5vw, 2px);
     line-height: 1.4;
 }
 
 .feature-description {
-    font-size: clamp(12px, 1.4vw, 14px);
+    font-size: clamp(10px, 2.5vw, 14px);
     opacity: 0.9;
     line-height: 1.5;
     font-weight: 300;
-    white-space: nowrap;
+    white-space: normal;
+    text-align: center;
 }
-
-
 
 /* ===== WANNA PILATES SECTION ===== */
 .wanna-pilates {
@@ -374,7 +365,7 @@ letter-spacing: 1px;
     padding: 0 20px;
     display: flex;
     align-items: center;
-    gap: 60px;
+    gap: clamp(30px, 8vw, 60px);
 }
 
 .wanna-content {
@@ -383,19 +374,19 @@ letter-spacing: 1px;
 }
 
 .wanna-title {
-    font-size: clamp(20px, 3vw, 24px);
+    font-size: clamp(18px, 4vw, 24px);
     color: #5b3728;
     font-family: "UnJamoBatang", serif;
     margin-bottom: 30px;
     font-weight: 600;
     text-align: center;
-    letter-spacing: clamp(2px, 0.5vw, 5px);
+    letter-spacing: clamp(1px, 1vw, 5px);
 }
 
 .wanna-text {
     color: #bf9b64;
     line-height: 1.8;
-    font-size: 14px;
+    font-size: clamp(12px, 2.5vw, 14px);
     margin-bottom: 20px;
     text-align: justify;
 }
@@ -413,13 +404,13 @@ letter-spacing: 1px;
 }
 
 .wanna-image:first-child {
-    margin-top: -75px;
+    margin-top: clamp(-30px, -8vw, -75px);
     margin-right: 6px;
 }
 
 .wanna-image img {
     width: 100%;
-    height: 380px;
+    height: clamp(300px, 50vw, 380px);
     object-fit: cover;
     border-radius: 10px;
 }
@@ -462,7 +453,7 @@ letter-spacing: 1px;
 
 .brand-name {
     font-family: 'Playfair Display', serif;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
     font-weight: 400;
     color: #56410b;
     margin-bottom: 1rem;
@@ -470,7 +461,7 @@ letter-spacing: 1px;
 
 .hero-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: clamp(1.2rem, 5vw, 2.5rem);
     font-weight: 300;
     color: #b8870b8a;
     line-height: 1.3;
@@ -487,12 +478,12 @@ letter-spacing: 1px;
 
 .discover-btn {
     display: inline-block;
-    padding: 6px 33px;
+    padding: clamp(4px, 1.5vw, 6px) clamp(25px, 8vw, 33px);
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid #382a0655;
     color: #4f3c0bb7;
     font-family: 'Inter', sans-serif;
-    font-size: 0.7rem;
+    font-size: clamp(0.6rem, 2vw, 0.7rem);
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
@@ -503,7 +494,7 @@ letter-spacing: 1px;
 
 .decorative-line {
     width: 1.5px;
-    height: 80px;
+    height: clamp(50px, 10vw, 80px);
     background: linear-gradient(to bottom, #b8870bb9);
     margin: 0 auto 1rem;
     opacity: 1.8;
@@ -586,10 +577,10 @@ letter-spacing: 1px;
 
 .section-title-Start {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.2rem, 4vw, 2rem);
     color: #9E846A;
     font-weight: 400;
-    letter-spacing: clamp(1px, 0.3vw, 3px);
+    letter-spacing: clamp(1px, 0.5vw, 3px);
     margin-bottom: 80px;
     padding-top: 40px;
     text-transform: uppercase;
@@ -598,8 +589,8 @@ letter-spacing: 1px;
 
 .rooms-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: clamp(20px, 4vw, 60px);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(20px, 5vw, 60px);
     margin-top: 10px;
     max-width: 1200px;
     margin-left: auto;
@@ -619,8 +610,8 @@ letter-spacing: 1px;
 }
 
 .room-icon {
-    width: 80px;
-    height: 80px;
+    width: clamp(60px, 15vw, 80px);
+    height: clamp(60px, 15vw, 80px);
     margin: 0 auto 30px;
     position: relative;
 }
@@ -652,7 +643,7 @@ letter-spacing: 1px;
 }
 
 .room-title {
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     color: #583d2a;
     margin: 30px 0;
     font-weight: bold;
@@ -661,7 +652,7 @@ letter-spacing: 1px;
 .room-description {
     color: white;
     line-height: 1.8;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 2vw, 1rem);
     text-align: center;
     opacity: 0.9;
     max-width: 400px;
@@ -682,7 +673,7 @@ letter-spacing: 1px;
 
 .gallery-container {
     display: flex;
-    gap: 30px;
+    gap: clamp(15px, 5vw, 30px);
     max-width: 1400px;
     width: 100%;
     justify-content: center;
@@ -696,7 +687,7 @@ letter-spacing: 1px;
     border-radius: 32px;
     overflow: hidden;
     flex: 1;
-    width: 800px;
+    width: clamp(250px, 80vw, 800px);
     aspect-ratio: 3 / 4;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -708,15 +699,15 @@ letter-spacing: 1px;
 }
 
 .card-image {
-    width: 250%;
-    height: 250%;
+    width: 100%;
+    height: 100%;
     position: relative;
     overflow: hidden;
 }
 
 .card-image img {
-    width: 40%;
-    height: 40%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     object-position: center;
     transition: transform 0.3s ease;
@@ -728,20 +719,19 @@ letter-spacing: 1px;
 
 .nav-but {
     position: absolute;
-    /* bottom: 50px; */
     left: 50%;
     bottom: 50%;
     transform: translateX(-50%);
     display: flex;
-    gap: 420px;
+    gap: clamp(150px, 40vw, 420px);
     z-index: 10;
-
 }
+
 .nav-arrow-one,
 .nav-arrow-two {
     position: relative;
-    width: clamp(44px, 8vw, 66px);
-    height: clamp(44px, 8vw, 66px);
+    width: clamp(35px, 10vw, 66px);
+    height: clamp(35px, 10vw, 66px);
     background: rgba(248, 239, 186, 0.9);
     border: none;
     border-radius: 50%;
@@ -752,7 +742,7 @@ letter-spacing: 1px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(20px, 4vw, 30px);
+    font-size: clamp(16px, 5vw, 30px);
 }
 
 .nav-arrow-one:hover,
@@ -770,13 +760,13 @@ letter-spacing: 1px;
     min-height: 100vh;
     width: 100%;
     margin: 0 auto;
-    gap: clamp(30px, 6vw, 60px);
+    gap: clamp(20px, 8vw, 60px);
     align-items: center;
     padding: 40px 20px;
 }
 
 .lefts-section {
-    padding: clamp(40px, 10vh, 100px) 20px;
+    padding: clamp(20px, 8vh, 100px) 20px;
     position: relative;
 }
 
@@ -787,16 +777,16 @@ letter-spacing: 1px;
 
 .main-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-size: clamp(1.2rem, 5vw, 2rem);
     color: #b8956a;
     margin-bottom: 30px;
-    letter-spacing: clamp(1px, 0.3vw, 3px);
+    letter-spacing: clamp(1px, 0.5vw, 3px);
     line-height: 1.2;
 }
 
 .description {
     color: #694e2dc0;
-    font-size: clamp(14px, 2vw, 16px);
+    font-size: clamp(12px, 3vw, 16px);
     line-height: 1.8;
     margin-bottom: 20px;
     font-weight: 300;
@@ -812,13 +802,13 @@ letter-spacing: 1px;
 }
 
 .nav-dot {
-    width: 40px;
-    height: 40px;
+    width: clamp(30px, 8vw, 40px);
+    height: clamp(30px, 8vw, 40px);
     border-radius: 50%;
     border: 2px solid #6c4f3d;
     background-color: transparent;
     color: #6c4f3d;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -840,10 +830,10 @@ letter-spacing: 1px;
 .ctas-button {
     background-color: #b8956a;
     color: white;
-    padding: 10px 25px;
+    padding: clamp(8px, 2vw, 10px) clamp(20px, 5vw, 25px);
     border: none;
     border-radius: 30px;
-    font-size: 0.95rem;
+    font-size: clamp(0.8rem, 2.5vw, 0.95rem);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     cursor: pointer;
@@ -862,7 +852,7 @@ letter-spacing: 1px;
 
 .main-container img {
     width: 100%;
-    height: clamp(400px, 60vh, 620px);
+    height: clamp(300px, 50vw, 620px);
     object-fit: cover;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
@@ -882,11 +872,11 @@ letter-spacing: 1px;
 
 .cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: clamp(20px, 4vw, 40px);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(15px, 5vw, 40px);
     margin-bottom: 120px;
     background: rgba(255, 255, 255, 0.166);
-    padding: clamp(25px, 5vw, 55px);
+    padding: clamp(20px, 6vw, 55px);
     width: 100%;
     border-radius: 20px;
     max-width: 1200px;
@@ -897,10 +887,10 @@ letter-spacing: 1px;
 .pilates-card {
     background: #a68660;
     border-radius: 30px;
-    padding: clamp(30px, 5vw, 50px) clamp(20px, 3vw, 30px);
+    padding: clamp(25px, 6vw, 50px) clamp(15px, 4vw, 30px);
     text-align: left;
     position: relative;
-    min-height: 400px;
+    min-height: clamp(350px, 80vw, 400px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -911,7 +901,7 @@ letter-spacing: 1px;
 
 .card-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    font-size: clamp(1.3rem, 4vw, 2.1rem);
     color: #FCD27E;
     font-weight: 400;
     margin-bottom: 30px;
@@ -923,7 +913,7 @@ letter-spacing: 1px;
     font-family: 'Lora', serif;
     color: white;
     line-height: 2.8;
-    font-size: clamp(14px, 2vw, 16px);
+    font-size: clamp(12px, 3vw, 16px);
     font-weight: 300;
     margin-bottom: 40px;
     flex-grow: 1;
@@ -935,9 +925,9 @@ letter-spacing: 1px;
     color: #6f502e;
     border: none;
     border-radius: 10px;
-    padding: 15px clamp(30px, 5vw, 50px);
+    padding: clamp(12px, 3vw, 15px) clamp(25px, 6vw, 50px);
     font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
@@ -949,12 +939,12 @@ letter-spacing: 1px;
 
 .bottom-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.2rem, 4vw, 2rem);
     color: #9E846A;
     font-weight: 400;
-    letter-spacing: clamp(1px, 0.3vw, 3px);
+    letter-spacing: clamp(1px, 0.5vw, 3px);
     text-transform: uppercase;
-    margin-top: -80px;
+    margin-top: clamp(-40px, -10vw, -80px);
     padding-bottom: 40px;
     text-align: center;
 }
@@ -965,7 +955,7 @@ letter-spacing: 1px;
     padding: 60px 20px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap: clamp(30px, 6vw, 60px);
+    gap: clamp(20px, 8vw, 60px);
     align-items: start;
     max-width: 1200px;
 }
@@ -980,9 +970,9 @@ letter-spacing: 1px;
     background: transparent;
     border: 2px solid #b8a082;
     color: #b8a082;
-    padding: 10px 32px;
+    padding: clamp(8px, 2vw, 10px) clamp(25px, 6vw, 32px);
     border-radius: 25px;
-    font-size: 11px;
+    font-size: clamp(10px, 2.5vw, 11px);
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -998,7 +988,7 @@ letter-spacing: 1px;
 
 .main-heading {
     font-family: 'Lora', serif;
-    font-size: clamp(24px, 4vw, 30px);
+    font-size: clamp(20px, 5vw, 30px);
     font-weight: 500;
     color: #B5975E;
     line-height: 1.2;
@@ -1008,13 +998,13 @@ letter-spacing: 1px;
 
 .rooms-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
 .room-card {
     position: relative;
-    height: clamp(400px, 60vh, 600px);
+    height: clamp(300px, 50vw, 600px);
     border-radius: 12px;
     overflow: hidden;
     cursor: pointer;
@@ -1062,22 +1052,22 @@ letter-spacing: 1px;
 
 .room-content {
     position: absolute;
-    bottom: 30px;
-    left: 30px;
-    right: 30px;
+    bottom: clamp(15px, 5vw, 30px);
+    left: clamp(15px, 5vw, 30px);
+    right: clamp(15px, 5vw, 30px);
     z-index: 3;
     color: white;
 }
 
 .room-tagline {
-    font-size: 14px;
+    font-size: clamp(11px, 2.5vw, 14px);
     font-weight: 300;
     margin-bottom: 8px;
     opacity: 0.9;
 }
 
 .room-title {
-    font-size: clamp(20px, 4vw, 28px);
+    font-size: clamp(16px, 5vw, 28px);
     font-weight: 300;
     margin-bottom: 15px;
     letter-spacing: 0.5px;
@@ -1090,7 +1080,7 @@ letter-spacing: 1px;
     align-items: center;
     color: white;
     text-decoration: none;
-    font-size: 14px;
+    font-size: clamp(12px, 3vw, 14px);
     font-weight: 400;
     opacity: 0.9;
     transition: opacity 0.3s ease;
@@ -1103,13 +1093,13 @@ letter-spacing: 1px;
 .show-btn::after {
     content: '❯';
     margin-left: 8px;
-    font-size: 12px;
+    font-size: clamp(10px, 2.5vw, 12px);
 }
 
 /* ===== QUOTE SECTION ===== */
 .quote-section {
     background: #f4f1e8;
-    padding: clamp(40px, 8vh, 60px) clamp(20px, 5vw, 80px);
+    padding: clamp(30px, 8vh, 60px) clamp(15px, 6vw, 80px);
     position: relative;
     margin: 0 auto;
     text-align: center;
@@ -1123,12 +1113,12 @@ letter-spacing: 1px;
 
 .quote-text {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(1.2rem, 3vw, 1.7rem);
+    font-size: clamp(1rem, 4vw, 1.7rem);
     font-weight: 400;
     line-height: 1.5;
     color: #8b7355;
     letter-spacing: 0.3px;
-    margin: clamp(20px, 4vw, 40px);
+    margin: clamp(15px, 5vw, 40px);
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
@@ -1138,8 +1128,8 @@ letter-spacing: 1px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: clamp(35px, 6vw, 40px);
-    height: clamp(35px, 6vw, 40px);
+    width: clamp(30px, 8vw, 40px);
+    height: clamp(30px, 8vw, 40px);
     border: 1px solid #b8a082;
     border-radius: 50%;
     background: transparent;
@@ -1149,7 +1139,7 @@ letter-spacing: 1px;
     justify-content: center;
     transition: all 0.3s ease;
     color: #b8a082;
-    font-size: 14px;
+    font-size: clamp(12px, 3vw, 14px);
 }
 
 .nav-arrow:hover {
@@ -1159,11 +1149,11 @@ letter-spacing: 1px;
 }
 
 .nav-arrow.left {
-    left: clamp(10px, 5vw, 200px);
+    left: clamp(5px, 3vw, 200px);
 }
 
 .nav-arrow.right {
-    right: clamp(10px, 5vw, 200px);
+    right: clamp(5px, 3vw, 200px);
 }
 
 .nav-arrow.left::before {
@@ -1180,7 +1170,7 @@ letter-spacing: 1px;
 .footer-section {
     background: #b8966f;
     width: 100%;
-    padding: clamp(40px, 8vh, 80px) clamp(20px, 4vw, 40px);
+    padding: clamp(30px, 8vh, 80px) clamp(15px, 5vw, 40px);
     font-family: "Playfair Display", serif;
 }
 
@@ -1190,7 +1180,7 @@ letter-spacing: 1px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(40px, 10vw, 120px);
+    gap: clamp(30px, 10vw, 120px);
     align-items: start;
 }
 
@@ -1200,9 +1190,9 @@ letter-spacing: 1px;
 
 .newsletter-title {
     font-family: "Playfair Display", serif;
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(1.5rem, 6vw, 3rem);
     color: white;
-    letter-spacing: clamp(1px, 0.3vw, 3px);
+    letter-spacing: clamp(1px, 0.5vw, 3px);
     line-height: 1.2;
     font-weight: 300;
     text-transform: uppercase;
@@ -1220,8 +1210,8 @@ letter-spacing: 1px;
     background: transparent;
     border: none;
     border-bottom: 2px solid rgba(255, 255, 255, 0.4);
-    padding: 20px 0;
-    font-size: clamp(14px, 2vw, 18px);
+    padding: clamp(15px, 4vw, 20px) 0;
+    font-size: clamp(12px, 3vw, 18px);
     color: rgba(255, 255, 255, 0.8);
     outline: none;
     font-family: 'Georgia', serif;
@@ -1243,7 +1233,7 @@ letter-spacing: 1px;
     background: transparent;
     border: none;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 1.1rem;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
     cursor: pointer;
     font-family: 'Georgia', serif;
     display: flex;
@@ -1256,12 +1246,12 @@ letter-spacing: 1px;
 }
 
 .arrow {
-    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 3vw, 1.2rem);
 }
 
 .copyright {
     color: white;
-    font-size: 0.9rem;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
     text-align: left;
 }
 
@@ -1270,7 +1260,7 @@ letter-spacing: 1px;
 }
 
 .sitemap-title {
-    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 3vw, 1.5rem);
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 10px;
     margin-top: 40px;
@@ -1280,7 +1270,7 @@ letter-spacing: 1px;
 
 .sitemap-links {
     display: flex;
-    gap: clamp(20px, 6vw, 60px);
+    gap: clamp(15px, 6vw, 60px);
     margin-bottom: 20px;
     flex-wrap: wrap;
 }
@@ -1288,7 +1278,7 @@ letter-spacing: 1px;
 .sitemap-links a {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
 .sitemap-links a:hover {
@@ -1296,7 +1286,7 @@ letter-spacing: 1px;
 }
 
 .contact-title {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.2rem, 4vw, 2rem);
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 10px;
     font-weight: 300;
@@ -1310,7 +1300,7 @@ letter-spacing: 1px;
 .contact-info p {
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 10px;
-    font-size: clamp(14px, 2vw, 16px);
+    font-size: clamp(12px, 3vw, 16px);
 }
 
 .social-icons {
@@ -1320,8 +1310,8 @@ letter-spacing: 1px;
 }
 
 .social-icon {
-    width: 40px;
-    height: 40px;
+    width: clamp(35px, 8vw, 40px);
+    height: clamp(35px, 8vw, 40px);
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
@@ -1329,7 +1319,7 @@ letter-spacing: 1px;
     justify-content: center;
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     transition: all 0.3s ease;
 }
 
@@ -1346,7 +1336,7 @@ letter-spacing: 1px;
 }
 
 .footer-social-icon {
-    font-size: 18px;
+    font-size: clamp(16px, 4vw, 18px);
     color: white;
     transition: transform 0.3s ease, color 0.3s ease;
 }
@@ -1360,10 +1350,10 @@ letter-spacing: 1px;
 .fotter_btn {
     font-family: "Playfair Display", serif;
     color: white;
-    padding: 12px clamp(30px, 8vw, 65px);
+    padding: clamp(10px, 3vw, 12px) clamp(25px, 8vw, 65px);
     border: none;
     border-radius: 30px;
-    font-size: 0.95rem;
+    font-size: clamp(0.8rem, 2.5vw, 0.95rem);
     text-transform: uppercase;
     letter-spacing: 1.5px;
     cursor: pointer;
@@ -1375,7 +1365,7 @@ letter-spacing: 1px;
 }
 
 .cats {
-    padding: 12px clamp(20px, 8vw, 55px);
+    padding: clamp(10px, 3vw, 12px) clamp(18px, 8vw, 55px);
     background: none;
     border: 1px solid #33333395;
     color: #9E846A;
@@ -1433,19 +1423,20 @@ letter-spacing: 1px;
         margin: 0 auto;
     }
 
-    /* Features Grid */
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        margin-top: 100px;
+    /* Features */
+    .features-container {
+        flex-direction: column;
+        gap: 40px;
     }
 
-    .center-image {
-        position: static;
-        transform: none;
-        margin: 0 auto 40px;
-        width: 250px;
-        height: 250px;
+    .features-left,
+    .features-right {
+        gap: 30px;
+        align-items: center;
+    }
+
+    .feature-description {
+        white-space: normal;
     }
 
     /* Wanna Pilates */
@@ -1499,7 +1490,7 @@ letter-spacing: 1px;
     }
 
     .rooms-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 15px;
     }
 
@@ -1562,13 +1553,14 @@ letter-spacing: 1px;
 
     .hero-text-left,
     .hero-text-right {
-        font-size: 20px;
         position: relative;
         left: auto;
         right: auto;
         top: auto;
         text-align: center;
-        margin: 20px 0;
+        margin: 20px auto;
+        display: block;
+        width: fit-content;
     }
 
     .cta-button {
@@ -1587,8 +1579,30 @@ letter-spacing: 1px;
     }
 
     .about-title {
-        font-size: 36px;
-        letter-spacing: 2px;
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+
+    /* About text 2 fix */
+    .about-text2 {
+        position: static;
+        left: auto;
+        right: auto;
+        width: 100%;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    /* Features */
+    .features-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .center-image {
+        width: 200px;
+        height: 200px;
+        margin: 20px auto;
     }
 
     /* Cards */
@@ -1600,40 +1614,40 @@ letter-spacing: 1px;
     }
 
     .pilates-card {
-        padding: 30px 20px;
-        min-height: 350px;
+        padding: 25px 15px;
+        min-height: 320px;
     }
 
     .card-title {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         margin-bottom: 20px;
     }
 
     .card-description {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 2.2;
         margin-bottom: 30px;
     }
 
     .card-button {
-        padding: 12px 25px;
+        padding: 12px 20px;
         font-size: 1rem;
     }
 
     /* Rooms */
     .rooms-container {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 25px;
     }
 
     .room-card {
-        height: 350px;
+        height: 300px;
     }
 
     .room-content {
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
     }
 
     /* Gallery */
@@ -1646,7 +1660,7 @@ letter-spacing: 1px;
     }
 
     .nav-but {
-        gap: 150px;
+        gap: 120px;
         bottom: 20px;
     }
 
@@ -1657,7 +1671,7 @@ letter-spacing: 1px;
 
     .quote-text {
         margin: 15px;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     /* Footer */
@@ -1666,7 +1680,7 @@ letter-spacing: 1px;
     }
 
     .newsletter-title {
-        font-size: 2rem;
+        font-size: 1.6rem;
         letter-spacing: 1px;
     }
 }
@@ -1677,47 +1691,52 @@ letter-spacing: 1px;
     /* Hero */
     .hero {
         height: 70vh;
-        min-height: 450px;
+        min-height: 400px;
+    }
+
+    .hero-text-left,
+    .hero-text-right {
+        font-size: 20px;
     }
 
     /* Gallery */
     .nav-but {
-        gap: 120px;
+        gap: 100px;
     }
 
     /* Cards */
     .pilates-card {
-        padding: 25px 15px;
-        min-height: 320px;
+        padding: 20px 12px;
+        min-height: 300px;
     }
 
     .card-title {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     /* Room Cards */
     .room-card {
-        height: 300px;
+        height: 280px;
     }
 
     .room-title {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 1.1;
     }
 
     .room-tagline {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     /* Main Container */
     .main-container img {
-        height: 300px;
-        border-radius: 10px;
+        height: 250px;
+        border-radius: 8px;
     }
 
     /* Quote */
     .quote-text {
-        font-size: 1rem;
+        font-size: 0.95rem;
         margin: 10px;
     }
 }
@@ -1733,12 +1752,17 @@ letter-spacing: 1px;
     /* Hero */
     .hero {
         height: 60vh;
-        min-height: 400px;
+        min-height: 350px;
+    }
+
+    .hero-text-left,
+    .hero-text-right {
+        font-size: 18px;
     }
 
     /* About */
     .about-title {
-        font-size: 30px;
+        font-size: 24px;
         letter-spacing: 1px;
     }
 
@@ -1748,62 +1772,62 @@ letter-spacing: 1px;
     }
 
     .pilates-card {
-        padding: 20px 12px;
-        min-height: 300px;
+        padding: 18px 10px;
+        min-height: 280px;
     }
 
     .card-title {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .card-description {
-        font-size: 13px;
+        font-size: 12px;
         line-height: 2;
     }
 
     /* Rooms */
     .room-card {
-        height: 280px;
+        height: 260px;
     }
 
     .room-content {
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
     }
 
     .room-title {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .room-tagline {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     /* Gallery */
     .nav-but {
-        gap: 100px;
+        gap: 80px;
     }
 
     .nav-arrow-one,
     .nav-arrow-two {
-        width: 38px;
-        height: 38px;
-        font-size: 16px;
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
     }
 
     /* Main Container */
     .main-container img {
-        height: 250px;
+        height: 220px;
     }
 
     /* Footer */
     .newsletter-title {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .contact-title {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -1891,16 +1915,16 @@ letter-spacing: 1px;
 }
 
 .logo-text img {
-    width: clamp(100px, 15vw, 200px);
+    width: clamp(80px, 20vw, 200px);
     height: auto;
-    max-height: clamp(100px, 20vh, 200px);
+    max-height: clamp(60px, 15vh, 200px);
     filter: brightness(0) invert(1);
 }
 
 /* Image wrappers */
 .image-wrapper {
     width: 100%;
-    max-width: 300px;
+    max-width: clamp(250px, 80vw, 300px);
     height: auto;
     overflow: hidden;
     border-radius: 12px;
