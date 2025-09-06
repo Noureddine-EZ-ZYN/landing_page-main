@@ -128,6 +128,26 @@
                 transform: rotate(360deg);
             }
         }
+       /* Desktop par défaut */
+.desktop-only { display: block; }
+.mobile-only { display: none; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .desktop-only { display: none; }
+    .mobile-only { display: block; }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+    }
+}
+
+
     </style>
 </head>
 
@@ -143,7 +163,24 @@
                     <span>All the rooms are built by recommendation!</span>
                 </div>
             </div>
-
+            <!-- Version mobile -->
+            <div class="client-info mobile-only">
+                <h2 class="section-title">Your Information</h2>
+                <input type="text" id="userNameMobile" placeholder="Your Name" />
+                <input type="email" id="userEmailMobile" placeholder="Your Email" />
+            </div>
+            
+            <div class="session-time mobile-only">
+                <h3>Total session time</h3>
+                <div class="duration">
+                    <div class="duration-icon">⏱</div>
+                    <div>
+                        <div>Duration</div>
+                        <div style="font-size: 12px;">30-40 mins</div>
+                    </div>
+                </div>
+            </div>
+                
             <!-- Calendar -->
             <div>
                 <h2 class="section-title">Choose a date</h2>
@@ -183,13 +220,13 @@
         <div class="right-section">
 
             <!-- Your Information -->
-            <div class="client-info">
+            <div class="client-info desktop-only">
                 <h2 class="section-title">Your Information</h2>
                 <input type="text" id="userName" placeholder="Your Name" />
                 <input type="email" id="userEmail" placeholder="Your Email" />
             </div>
-
-            <div class="session-time">
+            
+            <div class="session-time desktop-only">
                 <h3>Total session time</h3>
                 <div class="duration">
                     <div class="duration-icon">⏱</div>
@@ -198,7 +235,7 @@
                         <div style="font-size: 12px;">30-40 mins</div>
                     </div>
                 </div>
-            </div>
+                </div>
 
             <!-- Rooms -->
             <div>
@@ -253,10 +290,13 @@
             <div id="recap"></div>
 
             <!-- buttons -->
-            <div class="bottom-buttons">
-                <a href="index.html"> <button class="btn-secondary">Back</button></a>
-                <button class="btn-primary">Confirm</button>
-            </div>
+          <div class="bottom-buttons">
+  <a href="index.html">
+    <button class="btn-secondary">Back</button>
+  </a>
+  <button class="btn-primary">Confirm</button>
+</div>
+
         </div>
     </div>
 
